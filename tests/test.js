@@ -1,18 +1,9 @@
-    'use strict';
-    
-let expect = require('chai');
-let aritGeo = require ('../src/main.js').aritGeo;
-// let aritGeo = aritGeo.aritGeo;
-console.log(aritGeo);
+'use strict';
 
-var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1,2,3].indexOf(4));
-    });
-  });
-});
+import aritGeo from '../src/main.js';
+import chai  from 'chai';
+const assert = chai.assert;
+
         
 describe("Check that an array of numbers is either arithmetic or geometric: ", () => {
 
@@ -81,25 +72,25 @@ describe("Check that an array of numbers is either arithmetic or geometric: ", (
 
     describe("When the array contains different data types", () => {
         
-                it("should return 'enter an array that contains all numbers' for [1, 2,undefined, 5, 8]", () => {
-                    assert.equal('enter an array that contains all numbers',aritGeo([1, 2, undefined, 5, 8]));
-        
-                });
-        
-                it("should return 'enter an array that contains all numbers' for [1, 2,true, 5, 8]", () => {
-                    assert.equal('enter an array that contains all numbers',aritGeo([1, 2, true, 5, 8]));
-        
-                });
-        
-                it("should return 'enter an array that contains all numbers' for [1, 'symbol',undefined, 5, 8]", () => {
-                    assert.equal('enter an array that contains all numbers',aritGeo([1, 'symbol', undefined, 5, 8]));
-        
-                });
-                it("should return 'enter an array that contains all numbers' for [1, 'symbol',undefined, ()=>{}, 8]", () => {
-                    assert.equal('enter an array that contains all numbers',aritGeo([1, 'symbol', undefined, ()=>{}, 8]));
-        
-                });
+        it("should return 'enter an array that contains all numbers' for [1, 2,undefined, 5, 8]", () => {
+            assert.equal('enter an array that contains all numbers',aritGeo([1, 2, undefined, 5, 8]));
+
+        });
+
+        it("should return 'enter an array that contains all numbers' for [1, 2,true, 5, 8]", () => {
+            assert.equal('enter an array that contains all numbers',aritGeo([1, 2, true, 5, 8]));
+
+        });
+
+        it("should return 'enter an array that contains all numbers' for [1, 'symbol',undefined, 5, 8]", () => {
+            assert.equal('enter an array that contains all numbers',aritGeo([1, 'symbol', undefined, 5, 8]));
+
+        });
+        it("should return 'enter an array that contains all numbers' for [1, 'symbol',undefined, ()=>{}, 8]", () => {
+            assert.equal('enter an array that contains all numbers',aritGeo([1, 'symbol', undefined, ()=>{}, 8]));
+
+        });
                 
-            });
+    });
 });
     
